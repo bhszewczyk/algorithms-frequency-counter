@@ -11,6 +11,10 @@ function same(initialArray, squaredValuesGoal) {
 		return;
 	}
 	// sort both arrays
+	const sortInitialArray = initialArray.sort((a, b) => a - b);
+	const sortSquaredValuesGoalArray = squaredValuesGoal.sort((a, b) => a - b);
+	console.log(sortInitialArray, sortSquaredValuesGoalArray);
+
 	// create variable which hold squares of initial array
 	// compare if squaredValuesGoal contains initialArraySquared
 	// return true if every initialArray has its square in the squaredValueGoal
