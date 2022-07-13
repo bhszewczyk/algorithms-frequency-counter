@@ -56,6 +56,7 @@ function same2(arr1, arr2) {
 	}
 	return true;
 }
-2;
+
 console.log(same2([2, 1, 2, 3], [9, 4, 1, 4, 12]));
 console.log(same2([2, 1, 2, 3], [9, 4, 1, 4]));
+console.log(same2([2, 1, 2, 5, 3], [9, 4, 1, 4]));
