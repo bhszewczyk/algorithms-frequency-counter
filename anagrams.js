@@ -4,11 +4,14 @@ function checkIfAnagram(str1, str2) {
 	const arr1 = [...str1];
 	const arr2 = [...str2];
 
+	if (arr1.length !== arr2.length) {
+		return false;
+	}
+
 	let letters1 = {};
 	let letters2 = {};
 
 	for (letter in arr1) {
-		// console.log(arr1[letter]);
 		letters1[arr1[letter]] = ++letters1[arr1[letter]] || 1;
 	}
 
@@ -17,11 +20,6 @@ function checkIfAnagram(str1, str2) {
 	}
 
 	for (let key in letters1) {
-		console.log(key);
-		if (!(key in letters2)) {
-			return false;
-		}
-
 		if (letters2[key] !== letters1[key]) {
 			return false;
 		}
@@ -30,4 +28,6 @@ function checkIfAnagram(str1, str2) {
 	return true;
 }
 
-console.log(checkIfAnagram('hallo', 'aollh'));
+console.log(checkIfAnagram('listen', 'silent'));
+console.log(checkIfAnagram('sister', 'tesis'));
+console.log(checkIfAnagram('from', 'forms'));
