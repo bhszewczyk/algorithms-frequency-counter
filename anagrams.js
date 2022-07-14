@@ -1,9 +1,9 @@
 // Given two strings write a function to determine if the second string is an anagram of the first.
 
 function checkIfAnagram(str1, str2) {
-	// make arrays from strings
-	const arr1 = [...str1];
-	const arr2 = [...str2];
+	// make arrays from strings, make letters a lower case
+	const arr1 = [...str1.toLowerCase()];
+	const arr2 = [...str2.toLowerCase()];
 
 	// check if strings have the same chara number
 	if (arr1.length !== arr2.length) {
@@ -37,3 +37,4 @@ function checkIfAnagram(str1, str2) {
 console.log(checkIfAnagram('listen', 'silent'));
 console.log(checkIfAnagram('sister', 'tesis'));
 console.log(checkIfAnagram('from', 'forms'));
+console.log(checkIfAnagram('Cinema', 'Iceman'));
