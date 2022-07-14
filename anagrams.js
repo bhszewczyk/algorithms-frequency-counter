@@ -15,11 +15,11 @@ function checkIfAnagram(str1, str2) {
 	let letters2 = {};
 
 	// add letter keys and frequencies to the object
-	for (letter in arr1) {
+	for (let letter in arr1) {
 		letters1[arr1[letter]] = ++letters1[arr1[letter]] || 1;
 	}
 
-	for (letter in arr2) {
+	for (let letter in arr2) {
 		letters2[arr2[letter]] = ++letters2[arr2[letter]] || 1;
 	}
 
